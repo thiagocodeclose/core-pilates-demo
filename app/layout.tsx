@@ -4,6 +4,7 @@ import { Libre_Baskerville, Source_Sans_3 } from 'next/font/google';
 import './globals.css';
 import { getKorivaConfig, buildCssVars } from '@/lib/koriva-config';
 
+import { KorivaLivePreview } from '@/components/KorivaLivePreview';
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -29,7 +30,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const vars = buildCssVars(cfg?.brand);
   return (
     <html lang="en" style={vars as React.CSSProperties}>
-      <body className={`${libreBaskerville.variable} ${sourceSans.variable}`}>{children}</body>
+      <body className={`${libreBaskerville.variable} ${sourceSans.variable}`}>{children}<KorivaLivePreview /></body>
     </html>
   );
 }
