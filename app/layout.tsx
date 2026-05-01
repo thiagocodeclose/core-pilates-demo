@@ -2,6 +2,7 @@
 import type { Metadata } from 'next';
 import { Libre_Baskerville, Source_Sans_3 } from 'next/font/google';
 import './globals.css';
+import { getKorivaConfig, buildCssVars } from '@/lib/koriva-config';
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
@@ -23,9 +24,11 @@ export const metadata: Metadata = {
   description: 'Precision Pilates studio in San Francisco. Reformer, mat, tower, and private sessions for every body.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const cfg = await getKorivaConfig();
+  const vars = buildCssVars(cfg?.brand);
   return (
-    <html lang="en">
+    <html lang="en" style={vars as React.CSSProperties}>
       <body className={`${libreBaskerville.variable} ${sourceSans.variable}`}>{children}</body>
     </html>
   );
