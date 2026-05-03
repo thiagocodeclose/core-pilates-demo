@@ -171,14 +171,14 @@ export default function CorePage() {
         <div className="co-hero-bg" />
         <div className="co-hero-overlay" />
         <div className="co-hero-content">
-          <p className="co-hero-eyebrow">{d.gym.location} · Precision Pilates</p>
+          <p data-cg-el="hero_eyebrow" className="co-hero-eyebrow">{d.gym.location} · Precision Pilates</p>
           <h1 data-cg-el="hero_headline_1" className="co-hero-title">
             Movement,<br /><em>with</em><br /><span>intention.</span>
           </h1>
-          <p className="co-hero-sub">San Francisco's premier Pilates studio. Reformer, mat, and tower classes taught with clinical precision and genuine care for your body.</p>
+          <p data-cg-el="hero_subtitle" className="co-hero-sub">San Francisco's premier Pilates studio. Reformer, mat, and tower classes taught with clinical precision and genuine care for your body.</p>
           <div className="co-hero-actions">
-            <button className="co-btn-primary">Book Intro Class</button>
-            <button className="co-btn-ghost">View Classes</button>
+            <button data-cg-el="hero_cta_primary" className="co-btn-primary">Book Intro Class</button>
+            <button data-cg-el="hero_cta_secondary" className="co-btn-ghost">View Classes</button>
           </div>
         </div>
       </section>
