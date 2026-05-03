@@ -172,7 +172,7 @@ export default function CorePage() {
         <div className="co-hero-overlay" />
         <div className="co-hero-content">
           <p className="co-hero-eyebrow">{d.gym.location} · Precision Pilates</p>
-          <h1 className="co-hero-title">
+          <h1 data-cg-el="hero_headline_1" className="co-hero-title">
             Movement,<br /><em>with</em><br /><span>intention.</span>
           </h1>
           <p className="co-hero-sub">San Francisco's premier Pilates studio. Reformer, mat, and tower classes taught with clinical precision and genuine care for your body.</p>
