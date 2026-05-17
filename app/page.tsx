@@ -264,7 +264,7 @@ export default function CorePage() {
           <div className="co-footer-logo">Core<em> Method</em></div>
           <div className="co-footer-info">{d.gym.address}<br />{d.gym.phone} · {d.gym.email}</div>
         </div>
-        <div className="co-footer-copy">© {new Date().getFullYear()} {d.gym.name}. Powered by Koriva.</div>
+        <div className="co-footer-copy">© {new Date().getFullYear()} {d.gym.name}. Powered by Garrison365.</div>
       </footer>
     </>
   );
